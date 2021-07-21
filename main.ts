@@ -49,7 +49,7 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 // This is to open the radio antennas to the transmissions, DO THIS BEFORE THE TRANSMITTER MICRO:BIT
-input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+input.onLogoEvent(TouchButtonEvent.Touched, function () {
     radio.sendString("READY FOR RECEIVING MESSAGES")
 })
 // This is the start sequence that sets all of the transmissions state into the boolean.
