@@ -48,16 +48,13 @@ input.onButtonPressed(Button.A, function () {
         }
     }
 })
-// This is to open the radio antennas to the transmissions, DO THIS BEFORE THE TRANSMITTER MICRO:BIT
-input.onLogoEvent(TouchButtonEvent.Touched, function () {
-    radio.sendString("READY FOR RECEIVING MESSAGES")
-})
 // This is the start sequence that sets all of the transmissions state into the boolean.
 let receivedRadio = 0
 let broadcastOn = false
 let alarmOn = false
 alarmOn = false
 broadcastOn = false
+radio.setGroup(192)
 // Specific to the micro:bit version 2
 basic.forever(function () {
     music.setBuiltInSpeakerEnabled(true)
